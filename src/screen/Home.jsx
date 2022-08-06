@@ -1,14 +1,20 @@
-import * as React from "react";
+import React, { useState, useEffect } from 'react';
 import Stack from '@mui/material/Stack';
 import Button from '@mui/material/Button';
 import DownloadIcon from '@mui/icons-material/Download';
 import ContactPhoneIcon from '@mui/icons-material/ContactPhone';
 import Avatar from '@mui/material/Avatar';
+import LinearProgress from '@mui/material/LinearProgress';
 import {Link} from "react-router-dom";
 function Home(){
+    const [loading,setLoading] = useState(true);
+    useEffect(()=>{
+        setLoading(false);
+    },[]);
 
     return(
         <>
+        {loading && <LinearProgress />}
         <div style={{height:'100vh', backgroundImage:`URL('https://us.123rf.com/450wm/peshkova/peshkova1912/peshkova191213132/135761600-empty-spot-on-white-table-full-of-office-tools-mock-up-3d-rendering.jpg?ver=6')`,
 
     

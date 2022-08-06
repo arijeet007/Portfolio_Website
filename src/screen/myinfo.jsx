@@ -1,11 +1,17 @@
-import * as React from 'react';
+import React, { useState, useEffect } from 'react';
+import LinearProgress from '@mui/material/LinearProgress';
 
 function MyInfo()
 {
+    const [loading,setLoading] = useState(true);
+    useEffect(()=>{
+        setLoading(false);
+    },[]);
     return(
         <>
+        {loading && <LinearProgress />}
             <div>
-                This is my info page
+                This is my MyInfoa page
             </div>
         </>
     );

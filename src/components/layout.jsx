@@ -19,8 +19,8 @@ function Layout()
           
         >
           <Toolbar />
-  
           <Outlet />
+          
   
   
         </Box>
