@@ -4,6 +4,7 @@ import Button from '@mui/material/Button';
 import DownloadIcon from '@mui/icons-material/Download';
 import ContactPhoneIcon from '@mui/icons-material/ContactPhone';
 import Avatar from '@mui/material/Avatar';
+import {Link} from "react-router-dom";
 function Home(){
 
     return(
@@ -19,7 +20,7 @@ function Home(){
     <div className="about">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id nobis officiis consequuntur recusandae. Delectus molestias dolore eum doloremque sit quasi, suscipit rem impedit similique facilis itaque, quam, neque hic architecto.</div>
     <br></br>
     <Stack direction="row" spacing={2}>
-    <Button variant="contained" startIcon={<DownloadIcon/>}>Download My CV</Button>
+    <Link to="/cv" style={{textDecoration:'none'}}><Button variant="contained"  startIcon={<DownloadIcon/>}>Download My CV</Button></Link>
     <Button variant="contained" startIcon={<ContactPhoneIcon/>}>Contact Me</Button>
         </Stack>
         </div>

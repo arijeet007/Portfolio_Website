@@ -27,8 +27,9 @@ function Sidebar(props){
       <Toolbar />
       <Divider />
       <List>
-      { arr.map((item,index)=>{return <SidebarItem title={item.title}  
-        icon={item.icon}/>
+      { arr.map((item,index)=>{return (
+      <SidebarItem title={item.title} icon={item.icon} link={item.link} keyms={index}/>
+      );
         })
         }
       </List>

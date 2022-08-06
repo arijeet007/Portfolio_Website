@@ -7,24 +7,29 @@ import RssFeedIcon from '@mui/icons-material/RssFeed'
 let  arr=[{
 
     title: "Home",
-    icon: <Home />
+    icon: <Home />,
+    link: "/"
 
 },
 {
     title:"MyInfo",
-    icon:<ContactMailIcon/>
+    icon:<ContactMailIcon/>,
+    link: "/myinfo"
 },
 {
     title:"Services",
-    icon:<SupportAgentIcon/>
+    icon:<SupportAgentIcon/>,
+    link: "/services"
 },
 {
     title:"CV",
-    icon:<DescriptionIcon/>
+    icon:<DescriptionIcon/>,
+    link: "/cv"
 },
 {
     title:"Blog",
-    icon:<RssFeedIcon/>
+    icon:<RssFeedIcon/>,
+    link: "/blog"
 }
 ]
 

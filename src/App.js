@@ -1,30 +1,35 @@
 import * as React from 'react';
 import PropTypes from 'prop-types';
-import Box from '@mui/material/Box';
-
-import Toolbar from '@mui/material/Toolbar';
-import Sidebar from './components/sidebar/sidebar';
 import Home from './screen/Home';
-
-const drawerWidth = 240;
+import CV from './screen/cv';
+import Blog from './screen/blog';
+import Services from './screen/services';
+import MyInfo from './screen/myinfo';
+import Layout from './components/layout';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+// import MyInfo from "./pages/MyInfo";
+// import Home from "./pages/Home";
+// import Blog from "./pages/Blog";
+// import CV from "./pages/CV";
+// import Services from "./pages/Services";
 
 function ResponsiveDrawer(props) {
   
 
   return (
-    <Box sx={{ display: 'flex' }}>
-      <Sidebar/>
-      
-      <Box
-        component="main"
-        sx={{ flexGrow: 1,  width: { sm: `calc(100% - ${drawerWidth}px)` } }}
+    <BrowserRouter>
+      <Routes>
+      <Route path='/' element={<Layout/>}>
+        <Route path='/' element={<Home/>}/>
+        <Route path='/cv' element={<CV/>}/>
+        <Route path='/myinfo' element={<MyInfo/>}/>
+        <Route path='/services' element={<Services/>}/>
+        <Route path='/blog' element={<Blog/>}/>
+        </Route>
         
-      >
-        <Toolbar />
-        <Home/>
-
-      </Box>
-    </Box>
+      </Routes>
+    </BrowserRouter>
+   
   );
 }
 
